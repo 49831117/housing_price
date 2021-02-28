@@ -57,10 +57,54 @@
 
 
 3. 資料分析
-   1. 內政部的實價登錄文件 `DataFrame` `concat` 後編碼為 `utf-16`
-   2. 觀察到各縣市 raw data 中`鄉鎮市區`欄位有各種小問題，如新竹市的`鄉鎮市區`資料中只有`新竹市`、台南市及數個縣市的`鄉鎮市區`資料中有 `NaN`，故將資料丟入 Google，重新取得地理資訊。
+   1. 將 `1061` 至 `1094` 各縣市資料合併後得：
+   ```python
+    Int64Index: 1339590 entries, 1 to 33
+    Data columns (total 34 columns):
+    #   Column         Non-Null Count    Dtype      
+    ---  ------         --------------    -----      
+    0   鄉鎮市區           1339507 non-null  object 
+    1   交易標的           1339590 non-null  object
+    2   土地區段位置建物區段門牌   1339565 non-null  object
+    3   土地移轉總面積平方公尺    1339590 non-null  object
+    4   都市土地使用分區       1067866 non-null  object
+    5   非都市土地使用分區      255378 non-null   object
+    6   非都市土地使用編定      254410 non-null   object
+    7   交易年月日          1339590 non-null  object
+    8   交易筆棟數          1339590 non-null  object
+    9   移轉層次           985894 non-null   object
+    10  總樓層數           984834 non-null   object
+    11  建物型態           1339590 non-null  object
+    12  主要用途           964280 non-null   object
+    13  主要建材           986102 non-null   object
+    14  建築完成年月         965641 non-null   object
+    15  建物移轉總面積平方公尺    1339590 non-null  object
+    16  建物現況格局-房       1339590 non-null  object
+    17  建物現況格局-廳       1339590 non-null  object
+    18  建物現況格局-衛       1339590 non-null  object
+    19  建物現況格局-隔間      1339590 non-null  object
+    20  有無管理組織         1339590 non-null  object
+    21  總價元            1339590 non-null  object
+    22  單價元平方公尺        1313168 non-null  object
+    23  車位類別           432942 non-null   object
+    24  車位移轉總面積平方公尺    1112061 non-null  object
+    25  車位總價元          1339590 non-null  object
+    26  備註             418373 non-null   object
+    27  編號             1339590 non-null  object
+    28  Q              1339590 non-null  object
+    29  車位移轉總面積(平方公尺)  227529 non-null   object
+    30  主建物面積          227529 non-null   float64
+    31  附屬建物面積         227529 non-null   float64
+    32  陽台面積           227529 non-null   float64
+    33  電梯             165045 non-null   object
+    dtypes: float64(3), object(31)
+    memory usage: 357.7+ MB
+    None
+   ```
+   2. 內政部的實價登錄文件 `DataFrame` `concat` 後要 `encoding = utf-16` 才能讀取 `.csv`。
+   3. 觀察到各縣市 raw data 中`鄉鎮市區`欄位有各種小問題，如新竹市的`鄉鎮市區`資料中只有`新竹市`、台南市及數個縣市的`鄉鎮市區`資料中有 `NaN`，故將資料丟入 Google，重新取得地理資訊。
       > [google-refine](https://code.google.com/archive/p/google-refine/)
-   3. `TWD97` 的 `.shp` 範圍太大
+   4. `TWD97` 的 `.shp` 範圍太大
       1. [MyGeodata Converter](https://mygeodata.cloud/conversion)：觀察 `.shp` 中描述的實際範圍
       2. 
       
