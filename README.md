@@ -57,11 +57,13 @@
 
 
 3. 資料分析
-   1. 內政部的實價登錄文件編碼為 `utf-16`
-   2. `TWD97` 的 `.shp` 範圍太大
+   1. 內政部的實價登錄文件 `DataFrame` `concat` 後編碼為 `utf-16`
+   2. 觀察到各縣市 raw data 中`鄉鎮市區`欄位有各種小問題，如新竹市的`鄉鎮市區`資料中只有`新竹市`、台南市及數個縣市的`鄉鎮市區`資料中有 `NaN`，故將資料丟入 Google，重新取得地理資訊。
+      > [google-refine](https://code.google.com/archive/p/google-refine/)
+   3. `TWD97` 的 `.shp` 範圍太大
       1. [MyGeodata Converter](https://mygeodata.cloud/conversion)：觀察 `.shp` 中描述的實際範圍
       2. 
       
-       ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
+         ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
     
 4. 視覺化
