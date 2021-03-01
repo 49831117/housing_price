@@ -101,7 +101,8 @@
     memory usage: 357.7+ MB
     None
    ```
-   2. 內政部的實價登錄文件 `DataFrame` `concat` 後要 `encoding = utf-16` 才能讀取 `.csv`。
+   2. 內政部的實價登錄文件 `DataFrame` `concat` 後要 `encoding = utf-16` 才能讀取 `.csv`，但無法 `sep=","`。
+      > try `utf-8-sig`
    3. 觀察到各縣市 raw data 中`鄉鎮市區`欄位有各種小問題，如新竹市的`鄉鎮市區`資料中只有`新竹市`、`台南市`及數個縣市的`鄉鎮市區`資料中有 `NaN`，故將資料丟入 Google，重新取得地理資訊。
       > [google-refine](https://code.google.com/archive/p/google-refine/)
    4. `TWD97` 的 `.shp` 範圍太大
