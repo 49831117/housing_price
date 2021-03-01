@@ -109,6 +109,7 @@
       >
       > [中華郵政 - 3+3郵遞區號應用系統](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)
          > 轉完得到 `dbf` 檔
+         >
          > `鄉鎮市區`名重複：南區、信義區、東區、北區、中正區、中山區、大安區
    
    4. `TWD97` 的 `.shp` 範圍太大
