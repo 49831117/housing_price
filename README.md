@@ -13,6 +13,7 @@
 5. seaborn `pip install seaborn`
 6. plotly `pip install plotly` 
 7. sklearn
+8. dbfread `pip install dbfread`
 
 
 ## 步驟
@@ -105,6 +106,10 @@
       > try `utf-8-sig`
    3. 觀察到各縣市 raw data 中`鄉鎮市區`欄位有各種小問題，如新竹市的`鄉鎮市區`資料中只有`新竹市`、`台南市`及數個縣市的`鄉鎮市區`資料中有 `NaN`，故將資料丟入 Google，重新取得地理資訊。
       > [google-refine](https://code.google.com/archive/p/google-refine/)
+      >
+      > [中華郵政 - 3+3郵遞區號應用系統](https://www.post.gov.tw/post/internet/Download/index.jsp?ID=220306)
+         > 轉完得到 `dbf` 檔
+   
    4. `TWD97` 的 `.shp` 範圍太大
       1. [MyGeodata Converter](https://mygeodata.cloud/conversion)：觀察 `.shp` 中描述的實際範圍
       2. 
