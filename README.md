@@ -10,10 +10,11 @@
     > Released: Feb 25, 2021
 3. matplotlib `pip install matplotlib`
 4. pandas `pip install pandas`
-5. seaborn `pip install seaborn`
-6. plotly `pip install plotly` 
-7. sklearn
-8. dbfread `pip install dbfread`
+5. geopandas `pip install geopandas`
+6. ~~seaborn `pip install seaborn`~~
+7. plotly `pip install plotly` 
+8. ~~sklearn~~
+9. ~~dbfread `pip install dbfread`~~
 
 
 ## 步驟
@@ -113,9 +114,8 @@
          > `鄉鎮市區`名重複：南區、信義區、東區、北區、中正區、中山區、大安區
    
    4. `TWD97` 的 `.shp` 範圍太大
+      > 南沙群島
       1. [MyGeodata Converter](https://mygeodata.cloud/conversion)：觀察 `.shp` 中描述的實際範圍
-      2. 
-      
-         ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
+           > ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
     
 4. 視覺化
