@@ -1,5 +1,8 @@
 # Housing Price
 
+## 參考資料
+[Lin-Sheng Lee (2014) 房屋價格決定因素之探討：空間與多層次分析之應用](https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22102NTU05389031%22.&searchmode=basic)
+
 ## 起源
 - [內政部 實價登錄 Open Data](https://plvr.land.moi.gov.tw/DownloadOpenData)
 - 觀察到某地區房價飆漲、薪水不漲的現象，思考是否各地皆如此。以此為出發點，期望可以透過此專案實踐將過去所學背景與程式語言結合，產出有用的數據分析資訊，提供未來多一個買房思考方向。
