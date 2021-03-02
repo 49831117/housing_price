@@ -1,20 +1,16 @@
 # Housing Price
 
 ## 起源
-- [內政部 實價登陸 Open Data](https://plvr.land.moi.gov.tw/DownloadOpenData)
+- [內政部 實價登錄 Open Data](https://plvr.land.moi.gov.tw/DownloadOpenData)
 - 觀察到某地區房價飆漲、薪水不漲的現象，思考是否各地皆如此。以此為出發點，期望可以透過此專案實踐將過去所學背景與程式語言結合，產出有用的數據分析資訊，提供未來多一個買房思考方向。
 
 ## 使用到的套件
-1. ~~ArcGIS `pip install arcgis`~~
-2. zipfile `pip install zipfile-deflate64` 
+1. zipfile `pip install zipfile-deflate64` 
     > Released: Feb 25, 2021
-3. matplotlib `pip install matplotlib`
-4. pandas `pip install pandas`
-5. geopandas `pip install geopandas`
-6. ~~seaborn `pip install seaborn`~~
-7. plotly `pip install plotly` 
-8. ~~sklearn~~
-9. ~~dbfread `pip install dbfread`~~
+2. matplotlib `pip install matplotlib`
+3. pandas `pip install pandas`
+4. geopandas `pip install geopandas`
+
 
 
 ## 步驟
@@ -31,7 +27,7 @@
             |x_lvr_land_c|租房交易|
 
 
-       2. 屬性名稱 
+       2. raw data - 屬性名稱 
    
    
             ```python 
@@ -59,7 +55,7 @@
 
 
 3. 資料分析
-   1. 將 `1061` 至 `1094` 各縣市資料合併後得：
+   1. 將 `1061` 至 `1094` 各縣市資料合併後得 1,339,590 過於龐大，故先按年處理。
    ```python
     Int64Index: 1339590 entries, 1 to 33
     Data columns (total 34 columns):
@@ -119,5 +115,17 @@
            > ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
     
 4. 視覺化
-   ![2020median](https://github.com/49831117/housing_price/blob/master/image/2020median.jpg "2020median")
+
+----
+
+[試跑結果](https://github.com/49831117/housing_price/blob/master/.py/first.md)
+
+![2020median](https://github.com/49831117/housing_price/blob/master/image/2020median.jpg "2020median")
+
+- 前提：
+  - 資料只考慮**含有建物**的交易且交易日期確實為**民國 109 年**的資料
+  - 因為最後數據統整是取中位數，考慮到民國 109 年交易熱度，將單位地區交易筆數 < 3 筆的鄉鎮市區資料刪除，以免受極值影響。
+- 問題：
+   1. 統計資料與圖資 `merge` 時是根據郵遞區號，但 `.shp` 中資料單位為鄉鎮市區，其中有些鄉鎮市區共用相同的郵遞區號（如：嘉義市東區、嘉義市西區皆為 600），故匯出的圖檔與資料會有錯誤。
+   2. 地址無詳細含有縣市與鄉鎮市區（即僅有地名，或是鄉鎮市區名稱錯誤）者直接剃除，共剃除約一萬筆左右（大約佔符合前提資料量的 6 %），可能會造成小地區統計資訊偏差。
 
