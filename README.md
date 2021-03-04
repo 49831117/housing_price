@@ -100,9 +100,15 @@
          > 特別注意`鄉鎮市區`名重複：南區、信義區、東區、北區、中正區、中山區、大安區
    
    3. [政府資料開放平臺](https://data.gov.tw/dataset/7442)中 `TWD97` 的 `.shp` 對於此討論主題而言範圍太大。
-      > 原因：南沙群島
+      > 原因：太平島（位於南沙群島，隸屬於高雄市旗津區中興里）
       - 透過 [MyGeodata Converter](https://mygeodata.cloud/conversion)：觀察 `.shp` 中描述的實際範圍
            > ![TWD97](https://github.com/49831117/housing_price/blob/master/image/geodataconv.jpg "TWD97")
+   4. [中華郵政](https://www.post.gov.tw/post/download/1050812_%E8%A1%8C%E6%94%BF%E5%8D%80%E7%B6%93%E7%B7%AF%E5%BA%A6%28toPost%29.xml)各鄉鎮市區郵遞區號所列舉的鄉鎮市區與 `TWD97` 中的鄉鎮市區差異：
+      - `TWD97` 的鄉鎮市區中尚少了以下三筆鄉鎮市區：
+        - 宜蘭縣釣魚臺列嶼  290
+        - 海南東沙	817
+        - 海南南沙  819
+
     
 4. 視覺化處理
    - 目前主要透過 `geopandas` 結合 `matplotlib` 呈現。
