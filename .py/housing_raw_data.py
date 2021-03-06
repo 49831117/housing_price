@@ -52,6 +52,7 @@ start_yq = int(str(start_y)+"0")
 end_yq = int(str(end_y+1)+"0")
 dirs = [d for d in os.listdir(path) if d[:4] == 'real' and end_yq>int(d[-4:])> start_yq ]
 
+
 dfs = []
 
 alphs = "a b c d e f g h i j k m n o p q t u v w x z".upper().split()
@@ -60,6 +61,7 @@ for d in dirs:
         path = os.path.join('raw_data', d,f'{alph}_lvr_land_a.csv')
         print("Reading:", path)
         df = pd.read_csv(path)
+        df['local'] = alph # 新增「城市代碼」欄位
         dfs.append(df.iloc[1:])
 
 
@@ -67,4 +69,4 @@ df = pd.concat(dfs)
 print("\n第一列資料：\n", df.iloc[1])
 print(df.info())
 
-df.to_csv(f"raw_data\\all_{start_y}_to_{end_y}.csv", encoding="utf-8-sig")
+df.to_csv("raw_data\\all_109_to_109.csv", encoding="utf-8-sig")
