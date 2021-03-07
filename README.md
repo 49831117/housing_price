@@ -1,7 +1,7 @@
 - [Housing Price](#housing-price)
   - [參考資料](#參考資料)
   - [起源](#起源)
-  - [使用到的套件](#使用到的套件)
+  - [使用到的套件 & 軟體](#使用到的套件--軟體)
   - [步驟](#步驟)
   - [Test](#test)
     - [篩選資料前提](#篩選資料前提)
@@ -20,12 +20,14 @@
 ## 起源
 - 觀察到某地區房價飆漲、薪水不漲的現象，思考是否各地皆如此。以此為出發點，期望可以透過此專案實踐將過去所學背景與程式語言結合，產出有用的數據分析資訊，提供未來多一個買房思考方向。
 
-## 使用到的套件
+## 使用到的套件 & 軟體
 1. zipfile `pip install zipfile-deflate64` 
     > Released: Feb 25, 2021
 2. matplotlib `pip install matplotlib`
 3. pandas `pip install pandas`
 4. geopandas `pip install geopandas`
+5. Excel
+6. Power BI
 
 
 
