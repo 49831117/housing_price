@@ -176,4 +176,10 @@
 ![2020median_1](https://github.com/49831117/housing_price/blob/master/image/2020median_1.jpg "2020median_1")
 
 民國 109 年各縣市單價（元/坪）長條圖
-![109年各縣市單價中位數](https://github.com/49831117/housing_price/blob/master/image/109年各縣市單價中位數.jpg "109年各縣市單價中位數")
+![109年各縣市單價中位數(建物相關)](https://github.com/49831117/housing_price/blob/master/image/109年各縣市單價中位數(建物相關).jpg "109年各縣市單價中位數(建物相關)")
+
+民國 109 年各縣市單價（元/坪）長條圖
+![109年各縣市單價平均數(建物相關)](https://github.com/49831117/housing_price/blob/master/image/109年各縣市單價平均數(建物相關).jpg "109年各縣市單價平均數(建物相關)")
+
+民國 109 年各縣市單價（元/坪）長條圖
+![109年各縣市單價標準差(建物相關)](https://github.com/49831117/housing_price/blob/master/image/109年各縣市單價標準差(建物相關).jpg "109年各縣市單價標準差(建物相關)")
