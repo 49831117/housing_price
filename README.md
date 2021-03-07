@@ -170,5 +170,8 @@
 
 [各鄉鎮市區中位數統計](https://github.com/49831117/housing_price/blob/master/.py/%E5%90%84%E9%84%89%E9%8E%AE%E5%B8%82%E5%8D%80%E4%B8%AD%E4%BD%8D%E6%95%B8%E7%B5%B1%E8%A8%88.md)
 
+民國 109 年各鄉鎮市區單價（元/坪）分布圖
 ![2020median_1](https://github.com/49831117/housing_price/blob/master/image/2020median_1.jpg "2020median_1")
 
+民國 109 年各縣市單價（元/坪）長條圖
+![109年各縣市單價中位數](https://github.com/49831117/housing_price/blob/master/image/109年各縣市單價中位數.jpg "109年各縣市單價中位數")
