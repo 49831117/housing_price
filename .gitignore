@@ -4,3 +4,7 @@ raw_data
 TWD97/check_name_list.csv
 .py/housing_zipcode.csv
 test_crawler_road.py
+.py/all_109.csv
+price_medium.csv
+country_medium.py
+109_price(part).csv
